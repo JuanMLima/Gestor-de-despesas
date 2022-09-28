@@ -1,6 +1,6 @@
 import * as C from '../TableArea/styles';
 import { Item } from '../../types/Item';
-
+import { TableItem } from '../TableItems'
  
 type Props = {
     list: Item[]
@@ -19,12 +19,9 @@ export const TableArea = ({ list }: Props) => {
             </thead>
             <tbody>
                 {list.map((item, index)=>(
-                    <tr key={index}>
-                        <td></td>
-                        <td>{item.category}</td>
-                        <td>{item.title}</td>
-                        <td></td>
-                    </tr>
+                    <TableItem key={index} item={item} />
+
+                    
 
                 ))}
             </tbody>
